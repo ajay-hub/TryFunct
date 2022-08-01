@@ -1,0 +1,28 @@
+<div class="container col-md-6">
+
+    <form (ngSubmit)="adminRegister()">
+        <div class="mb-3">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" [(ngModel)] = "adminReg.userNameAdmin">
+        </div>
+        <div class="mb-3">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" [(ngModel)] = "adminReg.name">
+          </div>
+          <div class="mb-3">
+            <label for="birthDate">Birth Date</label>
+            <input type="text" class="form-control" id="birthDate" name="birthDate" placeholder="Enter birth date" [(ngModel)] = "adminReg.birthDate">
+          </div>
+          <div class="mb-3">
+            <label for="password">Password</label>
+            <input type="text" class="form-control" id="password" name="password" placeholder="Enter password" [(ngModel)] = "adminReg.password">
+          </div>
+          <div class="mb-3">
+            <label for="mobNumber">Mobile Number</label>
+            <input type="number" class="form-control" id="mobNumber" name="mobNumber" placeholder="Enter number" [(ngModel)] = "adminReg.mobileNumber">
+          </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+</div>

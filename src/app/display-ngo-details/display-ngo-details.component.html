@@ -1,0 +1,31 @@
+<div class="container col-md-6">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Course ID</th>
+            <th scope="col">Training Sector </th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Course Details</th>
+            <th scope="col">Course Duration</th>
+            <th scope="col">Ngo Name</th>
+            <th scope="col">Status</th>
+            <th scope="col">Buttons</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let courseDetail of courseDetails">
+                <td><span>{{courseDetail.courseId}}</span></td>
+                <td><span>{{courseDetail.courseTrainingSector}}</span></td>
+                <td><span>{{courseDetail.courseName}}</span></td>
+                <td><span>{{courseDetail.courseDetails}}</span></td>
+                <td><span>{{courseDetail.courseDuration}}</span></td>
+                <td><span>{{courseDetail.ngo.name}}</span></td>
+                <td><span>{{courseDetail.courseStatus}}</span></td>
+                <td>
+                   <!--  <button (click)="deleteCourse(courseDetail.courseId)" class="btn btn-danger">Delete</button> -->
+                    <button (click)="updateCourseStatus(courseDetail.courseId)" class="btn btn-info" style="margin-left:10px">Update</button>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+</div>
